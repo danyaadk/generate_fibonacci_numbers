@@ -1,0 +1,22 @@
+# Function to generate Fibonacci numbers
+def generate_fibonacci_numbers(n):
+    fib_numbers = [0, 1]  # Initialize the list with first two Fibonacci numbers
+    while len(fib_numbers) < n:
+        next_num = fib_numbers[-1] + fib_numbers[-2]  # Compute the next Fibonacci number
+        fib_numbers.append(next_num)  # Add the next Fibonacci number to the list
+    return fib_numbers
+
+# Accept input from the user
+n = int(input("Enter the number of Fibonacci numbers to generate: "))
+
+# Call the function and print the Fibonacci numbers
+fibonacci_numbers = generate_fibonacci_numbers(n)
+print("Fibonacci numbers:")
+print(fibonacci_numbers)
+
+output:
+Enter the number of Fibonacci numbers to generate: 10
+Fibonacci numbers:
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+Process finished with exit code 0
